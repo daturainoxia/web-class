@@ -34,7 +34,7 @@ h1 {
 
 
 
-@media(max-width :800px) {
+@media(min-width :800px) {
     #grid {
         display: block;
     }
