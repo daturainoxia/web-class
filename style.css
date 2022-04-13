@@ -1,10 +1,12 @@
 body {
     margin: 0;
+
 }
 
 a {
     color: black;
     text-decoration: none;
+
 }
 
 h1 {
@@ -13,6 +15,11 @@ h1 {
     border-bottom: 1px solid gray;
     margin: 0;
     padding: 20px;
+
+}
+
+li{color:rgb(43, 189, 199);
+    
 }
 
 #grid ol {
@@ -21,28 +28,24 @@ h1 {
     margin: 0;
     padding: 20px;
 }
-
 #grid {
     display: grid;
     grid-template-columns: 150px 1fr;
 }
+ #article  {
+        padding-left: 25px;
+    }
 
-#article {
-    padding-left: 25px;
-}
-
-
-
-
-@media(min-width :800px) {
-    #grid {
+@media(max-width :800px) {
+    #gride {
         display: block;
+
     }
     #grid ol {
         border-right: none;
+
     }
     h1 {
         border-bottom: none;
     }
-
 }
