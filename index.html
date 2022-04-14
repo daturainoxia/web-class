@@ -8,42 +8,54 @@
         <link rel="stylesheet" href="style.css"/>
     </head>
     <body>
+        
+         <script>
+         var Body = {
+ SetColor: function(color) {
+   document.querySelector('body').style.color = color;
+},
+ SetBackgroundColor: function(color) {
+   document.querySelector('body').style.backgroundColor = color;
+}
+}
+var Links = {
+                SetColor: function(color) {
+                 var alist = document.querySelectorAll('a');
+                 var i = 0;
+                 while(i < alist.length) {
+                 alist[i].style.color = color;
+                 i = i + 1;
+                 }
+                 }
+                 }
+
+
+                 function nightDayHandler(self) {
+ var target = document.querySelector('body');
+   if (self.value === 'night') {
+        
+        Body.SetBackgroundColor('black');
+      
+          Body.SetColor ('white');
+          self.value = 'day'
+        
+          Links.SetColor ('powderblue')
+              
+      } else {
+          
+           Body.SetBackgroundColor('white');
+          Body.SetColor ('black');
+          self.value = 'night'
+          Links.SetColor ('bule')
+          }
+    }
+
+         </script>
+         <input type="button" value="night" onclick="nightDayHandler(this);">
         <h1>
             <a href="index.html">WEB_조주연</a>
         </h1>
-      
-            <input type="button" value="night" onclick="
-        var target = document.querySelector('body');
-        if (this.value === 'night') {
-            target.style.backgroundColor = 'black';
-            target.style.color = 'white';
-            this.value = 'day'
-
-            var alist = document.querySelectorAll('a');
-            var i = 0;
-            while ( i < alist.length) {
-                    alist[i].style.color = 'powderblue';
-                    console.log(alist[i]);
-                    i = i + 1;
-                }
-        } else {
-            target.style.backgroundColor = 'white';
-            target.style.color = 'black';
-            this.value = 'night'
-
-            var alist = document.querySelectorAll('a');
-            var i = 0;
-            while ( i < alist.length) {
-                    alist[i].style.color = 'blue';
-                    console.log(alist[i]);
-                    i = i + 1;
-                }
-
-            }
-        ">
-        
-
-        <div id="grid">
+      <div id="grid">
         <ol>
             <li>
                 <a href="1.html">HTML</a>
@@ -71,23 +83,17 @@
         <p>
             <a
                 href="https://www.w3.org/TR/2011/WD-html5-20110405/"
-                title="HTML5 specification">Hypertext Markup Language(HTML)</a>
-            is the standard markup language for
-            <strong>creating
-                <u>web</u>
-                pages</strong>
-            and web applications. Web browsers receive HTML documents from a web server or
-            from local storage and render the documents into multimedia web pages. HTML
-            describes the structure of a web page semantically and originally included cues
-            for the appearance of the document.</p>
+                title="HTML5 specification">
+                <p style="margin-top: 40px;">
+                    The World Wide Web (WWW), commonly known as the Web, is the world's dominant software platform.[1] It was originally a hypertext document management system[2] accessed over the Internet.[3]
+                    
+                    The resources of the Web are transferred via the Hypertext Transfer Protocol (HTTP), may be accessed by users by a software application called a web browser, and are published by a software application called a web server.
+                    
+        
+                    </p>
         <img src="coding.jpg" width="100%">
         <p style="margin-top: 40px;">
-            HTML elements are the building blocks of HTML pages. With HTML constructs,
-            images and other objects such as interactive forms may be embedded into the
-            rendered page. HTML provides a means to create structured documents by denoting
-            structural semantics for text such as headings, paragraphs, lists, links, quotes
-            and other items. HTML elements are delineated by tags, written using angle
-            brackets.
+            HWeb resources may be any type of downloaded media, but web pages are hypertext documents formatted in Hypertext Markup Language (HTML). Special HTML syntax displays embedded hyperlinks with URLs, which permits users to navigate to other web resources. In addition to text, web pages may contain references to images, video, audio, and software components, which are either displayed or internally executed in the user's web browser to render pages or streams of multimedia conten
         </p>
         <div id="disqus_thread"></div>
         <script>
