@@ -2,43 +2,91 @@
 <html>
 <head>
 <title>WEB1 - JavaScript </title>
+
 <meta charset="utf-8">
 <link rel="stylesheet" href="style.css" />
-<script>
-    function nightDayHandler(self) {
-var target = document.querySelector('body');
-if (self.value === 'night') {
-    target.style.backgroundColor = 'black';
-    target.style.color = 'white';
-    self.value = 'day'
 
-    var alist = document.querySelectorAll('a');
-    var i = 0;
-    while ( i < alist.length) {
-            alist[i].style.color = 'powderblue';
-            console.log(alist[i]);
-            i = i + 1;
-        }
-} else {
-    target.style.backgroundColor = 'white';
-    target.style.color = 'black';
-    self.value = 'night'
 
-    var alist = document.querySelectorAll('a');
-    var i = 0;
-    while ( i < alist.length) {
-            alist[i].style.color = 'blue';
-            console.log(alist[i]);
-            i = i + 1;
-        }
 
-    }
-}
-    </script>
+//     function nightDayHandler(self) {
+// var target = document.querySelector('body');
+// if (self.value === 'night') {
+//     target.style.backgroundColor = 'black';
+//     target.style.color = 'white';
+//     self.value = 'day'
+
+//     var alist = document.querySelectorAll('a');
+//     var i = 0;
+//     while ( i < alist.length) {
+//             alist[i].style.color = 'powderblue';
+//             console.log(alist[i]);
+//             i = i + 1;
+//         }
+// } else {
+//     target.style.backgroundColor = 'white';
+//     target.style.color = 'black';
+//     self.value = 'night'
+
+//     var alist = document.querySelectorAll('a');
+//     var i = 0;
+//     while ( i < alist.length) {
+//             alist[i].style.color = 'blue';
+//             console.log(alist[i]);
+//             i = i + 1;
+//         }
+
+//     }
+// }
+   
 
 </head>
 <body>
-      <input type="button" value="night" onclick="nightDayHandler(this);"> 
+    
+    <script>
+        var Body = {
+SetColor: function(color) {
+  document.querySelector('body').style.color = color;
+},
+SetBackgroundColor: function(color) {
+  document.querySelector('body').style.backgroundColor = color;
+}
+}
+var Links = {
+               SetColor: function(color) {
+                var alist = document.querySelectorAll('a');
+                var i = 0;
+                while(i < alist.length) {
+                alist[i].style.color = color;
+                i = i + 1;
+                }
+                }
+                }
+
+
+                function nightDayHandler(self) {
+var target = document.querySelector('body');
+  if (self.value === 'night') {
+       
+       Body.SetBackgroundColor('black');
+     
+         Body.SetColor ('white');
+         self.value = 'day'
+       
+         Links.SetColor ('powderblue')
+             
+     } else {
+         
+          Body.SetBackgroundColor('white');
+         Body.SetColor ('black');
+         self.value = 'night'
+         Links.SetColor ('bule')
+         }
+   }
+
+        </script>
+      
+<input type="button" value="night" onclick="nightDayHandler(this);">
+
    <h1><a href="index.html">WEB_조주연</a></h1>
 <div id="grid">
 <ol>
@@ -59,15 +107,7 @@ libraries.[13] All major web browsers have a dedicated JavaScript engine to exec
 </p>
 <div id="disqus_thread"></div>
 <script>
-    /**
-    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
-    /*
-    var disqus_config = function () {
-    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
-    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-    };
-    */
+   
     (function() { // DON'T EDIT BELOW THIS LINE
     var d = document, s = d.createElement('script');
     s.src = 'https://web1-pkj842qygv.disqus.com/embed.js';

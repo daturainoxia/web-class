@@ -4,8 +4,57 @@
 <title>WEB1 - CSS </title>
 <meta charset="utf-8">
 <link rel="stylesheet" href="style.css" />
+
+
 </head>
+
 <body>
+  
+    <script>
+        var Body = {
+SetColor: function(color) {
+  document.querySelector('body').style.color = color;
+},
+SetBackgroundColor: function(color) {
+  document.querySelector('body').style.backgroundColor = color;
+}
+}
+var Links = {
+               SetColor: function(color) {
+                var alist = document.querySelectorAll('a');
+                var i = 0;
+                while(i < alist.length) {
+                alist[i].style.color = color;
+                i = i + 1;
+                }
+                }
+                }
+
+
+                function nightDayHandler(self) {
+var target = document.querySelector('body');
+  if (self.value === 'night') {
+       
+       Body.SetBackgroundColor('black');
+     
+         Body.SetColor ('white');
+         self.value = 'day'
+       
+         Links.SetColor ('powderblue')
+             
+     } else {
+         
+          Body.SetBackgroundColor('white');
+         Body.SetColor ('black');
+         self.value = 'night'
+         Links.SetColor ('bule')
+         }
+   }
+
+        </script>
+
+<input type="button" value="night" onclick="nightDayHandler(this);"> 
+
 <h1><a href="index.html">WEB_조주연</a></h1>
 <div id="grid">
 <ol>
@@ -29,7 +78,7 @@ and repetition in the structural content
     <iframe width="560" height="315" src="https://www.youtube.com/embed/39vz1A1BhoU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </p>
 <div id="disqus_thread"></div>
-<script>
+<Script>
     /**
     *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
     *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
@@ -45,7 +94,7 @@ and repetition in the structural content
     s.setAttribute('data-timestamp', +new Date());
     (d.head || d.body).appendChild(s);
     })();
-</script>
+</Script>
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 </body>
 </html>
